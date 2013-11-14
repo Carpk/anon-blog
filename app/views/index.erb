@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Welcome to Anon Blog!</h1>
+
+  <p>Your source for anonamous anons that are anonomously anoning!</p>
+
+  <table>
+    <% @post.each do |post_title| %>
+    <p>
+      <a href='/posts/<%= post_title.title %>'>
+        <%= post_title.title %>
+      </a>
+    </p>
+    <% end %>
+  </table>
+</div>
+

@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h1>Welcome to Anon Blog!</h1>
+  <br><a href="/create_post">create a post</a></br>
+  <br><%=@user.user%></br>
+  <p>Your source for anonamous anons that are anonomously anoning!</p>
+
+  <form name="input" action="/profile/edit" method="post">
+    <ul style='list-style-type:none'>
+      <li>Username: <input value="<%=@user.try(:user)%>" type="text" placeholder='<%=@user.user%>' name="user"></li>
+      <li>Email:    <input value="<%=@user.try(:email)%>" type="text" placeholder='<%=@user.email%>' name="email"></li>
+      <li>Password: <input value="<%=@user.try(:password)%>" type="password" placeholder='<%=@user.password%>' name="password"></li>
+      <li><input type="submit" value="Submit"></li>
+    </ul>
+  </form>
+
+  
+</div>

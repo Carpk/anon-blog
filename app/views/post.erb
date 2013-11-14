@@ -1,0 +1,13 @@
+<div class="container">
+  <% @post = Post.find_by_title(params[:title]) %>  
+  <% @author = User.find_by_id(@post.user_id) %>  
+
+  <h1><%= @post.title %></h1>
+  <div><a href='/user/<%= @author.user %>'><%= @author.user %></a></div>
+
+<p>
+<%= @post.body %>
+</p>
+
+
+</div>

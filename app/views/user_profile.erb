@@ -1,0 +1,15 @@
+<div class="container">
+  <% @author = User.find_by_user(params[:user]) %>  
+  <% @all_posts = Post.where(user_id: @author.id )%>  
+
+  <h1><%= @author.user %></h1>
+      <%@all_posts.each do |topic|%>
+  <p>
+    <a href='/posts/<%=topic.title%>'><%=topic.title%></a>
+    <div><%=topic.created_at%></div>
+  </p>
+  <%end%>
+
+
+
+</div>

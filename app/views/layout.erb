@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <h1 class='header'>
+    <a class='to_left' href='/'>Anon Blog</a>
+
+  <%if session[:user_id] != nil%>
+    <a class='to_right' href='/log_out'>Log out</a>
+    <a class='to_right' href='/profile'>Profile</a>
+
+  <%else%>
+    <a class='to_right' href='/log_in'>Log In</a>
+  <%end%>
+
+  </h1>
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title>anon blog</title>
+
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
